@@ -1,0 +1,7 @@
+#Distributed file system for local machine
+#File named alpha_beta_gammar_theta 
+#
+#For Naive Scheme
+#   Transmit the file one by one to different user.
+#For Coded Scheme
+#   Combine two different file and transmit to two different user at same time.
