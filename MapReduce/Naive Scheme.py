@@ -1,27 +1,3 @@
-#For the problem I will connect with spark library to do the MapReduce.
-
-'''
-Define names
-chapter 1: 1_2_1_character
-chapter 2: 1_2_2_character
-chapter 3: 1_3_1_character
-chapter 4: 1_3_2_character
-chapter 5: 1_4_1_character
-chapter 6: 1_4_2_character
-chapter 7: 2_3_1_character
-chapter 8: 2_3_2_character
-chapter 9: 2_4_1_character
-chapter 10:2_4_2_character
-chapter 11:3_4_1_character
-chapter 12:3_4_2_character
-
-Define Folder name
-maptest: Master folder which contain all the files
-1: first node, will find how many As in there
-2: second node, will find how many Bss in there
-3: third node, will find how many Cs in there
-4: fourth node, will find how many Ds in there
-'''
 
 import timeit
 import sys
@@ -136,11 +112,9 @@ def Encoding(val1):
     t1=time.time()
     counter=0
     jeffdean1=val1
-#    print(jeffdean1)
     foldervalue=jeffdean1[0]
     jeffdeanlist=jeffdean1[1]
     path_folder="/Users/xiaoran/dropbox/cache_map/coded_"+jeffdean1[0]
-    # print(path_folder)
     os.chdir(path_folder)
     folder_naming=[]
     for index, i in enumerate(jeffdeanlist):
@@ -156,7 +130,6 @@ def Encoding(val1):
             file_named_2=value1+"_"+jeffdean1[0]+"_2_"+value2+".txt"
             counter+=2
             time.sleep(2*pause_time)
-#            print("helloworld"+jeffdean1[0],value1,file_named_2, file_named_1)
             shutil.copy('/Users/xiaoran/dropbox/cache_map/coded_'+jeffdean1[0]+'/'+file_named_2,file_trans_location)
             shutil.copy('/Users/xiaoran/dropbox/cache_map/coded_'+value1+'/'+file_named_1,file_trans_location)
         else:
@@ -164,7 +137,6 @@ def Encoding(val1):
             file_named_2=jeffdean1[0]+"_"+value1+"_2_"+value2+".txt"
             counter+=2
             time.sleep(2*pause_time)
-#            print(jeffdean1[0],value1,file_named_2, file_named_1)
             shutil.copy('/Users/xiaoran/dropbox/cache_map/coded_'+jeffdean1[0]+'/'+file_named_1,file_trans_location)
             shutil.copy('/Users/xiaoran/dropbox/cache_map/coded_'+value1+'/'+file_named_2,file_trans_location)
     t2=time.time()
@@ -189,12 +161,8 @@ if __name__ == "__main__":
         counter=int(user)
         userss=str(user)
         print("you are going to have " +userss + " users for this simulation" )
-    #filecreating()#creating files and folder
-        #def filecreating():
         files= os.listdir(path) #get file name under the folder
-        # define the access rights
         access_rights = 0o755
-        
         try:
             os.mkdir(folder_path, access_rights)
         except OSError:
@@ -205,26 +173,18 @@ if __name__ == "__main__":
         filecreator()
         user_name, temp2 = Mapping()
         everything=shufgen(temp2)
-    #    print(everything)
-#        pool=multiprocessing.Pool(processes = users)
         start=time.time()
-#        start =datetime.datetime.now()
         threads_encode = []
         for i in everything:
             jeffdean=i[0]
             t = threading.Thread(target=Encoding, args=(i,))
-#            pool.apply_async(Encoding, [i])
             threads_encode.append(t)
             t.start()
             print("current running server" + jeffdean)
-    #        pool.apply_async(Encoding, [user_name,temp2,i])
         for x in threads_encode:
             x.join()
-#        pool.close()
-#        pool.join()
         print("Done")
         finish=time.time()
-#        finish=datetime.datetime.now()
         excute_time=finish-start
         print("For " + userss +" users spent"+str(excute_time))
         forcounter+=1
