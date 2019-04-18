@@ -2,6 +2,9 @@
 #File named alpha_beta_gammar_theta 
 #
 #For Naive Scheme
-#   Transmit the file one by one to different user.
+#   Transmit the file one by one to different user. 
+#   There are 5 mode of communication cost(pause time) is 0.1 seconds for the mean, 1. fixed time(0.1) 2. exponential distribution(mean =0.1) 3. uniform distribution 4. pratical for exponential distribution( 0.05+ exponential time) 5. pratical for uniform distribution(0.05+ uniform distribution)
+#
 #For Coded Scheme
 #   Combine two different file and transmit to two different user at same time.
+#   There are 5 mode of communication cost(pause time) is 0.1 seconds for the mean, 1. fixed time(0.1) 2. exponential distribution(mean =0.1) 3. uniform distribution 4. pratical for exponential distribution( 0.05+ exponential time) 5. pratical for uniform distribution(0.05+ uniform distribution
