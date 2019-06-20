@@ -1,3 +1,3 @@
 # Research-of-MapReduce
-two repository, MapReduce and Reverse Index Coding
-More detail described in the folder's Readme.txt
+two repositories, MapReduce and Reverse Index Coding
+More detail described in the repository's Readme.txt
