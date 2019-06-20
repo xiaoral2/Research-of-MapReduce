@@ -1,2 +1,3 @@
 # Research-of-MapReduce
-rgnmr.py is naive scheme of mapreduce with any input
+two repository, MapReduce and Reverse Index Coding
+More detail described in the folder's Readme.txt
