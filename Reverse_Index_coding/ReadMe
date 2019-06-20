@@ -1,0 +1,24 @@
+
+This program used reversed index to transfer the file. Current stopped at did not change the communication cost by the size of the file. and asynchronous.
+
+For someone who may read this, the communication cost various by the time need to compare with the reverse index coding's naive scheme only if matched then you can start the new work. The suggest is about 2000, but you still need to check it if it is correct.
+
+res.txt is the text file that contains all the links that from crawler.py it has 1155 links.
+
+BinaryTool.py is a program change the file from integer or alphabet to binary and used same name.
+
+crawler.py is a program that collect all the information with the address of "uci.edu"
+
+FileCodedTransfer.py is a program that used coded scheme from MapReduce to communicate. 
+
+FileProcess.py is a program that do all the tricks for the naming(index to pair) and mapping
+
+FileReduce.py is the last step of the program that transfer binary back to integer. 
+
+FileTransfer.py is the program that used naive scheme from MapReduce to communicate
+
+
+#########################################################
+To run the program open the terminal and type: python3 main.py 1/2 loop times. 1 stands for naive scheme and 2 for coded scheme. Loop times is how many times you want to test.
+
+or if you are lazy you can use the bash program which named run_test.sh as example, you can type script and press enter then run ./main.py enter. then you just need to wait for the result. 
